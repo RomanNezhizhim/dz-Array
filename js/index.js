@@ -1,50 +1,58 @@
 // 1. Даны два массива: [1, 2, 3] и [4, 5, 6]. Объедините их вместе.   concat
-arr1 = [1, 2, 3];
-arr2 = [4, 5, 6];
-resultArr = arr1.concat(arr2);
-
+let arr1 = [1, 2, 3];
+let arr2 = [4, 5, 6];
+let concattArr = arr1.concat(arr2);
 
 // Дан массив [1, 2, 3]. Сделайте из него массив [3, 2, 1].    reverse
-raversArr = arr1.reverse();
-
+ let reversArr = arr1.reverse();
 
 // push, unshift
 // 3. Дан массив [1, 2, 3]. Добавьте ему в конец элементы 4, 5, 6.
-arr = [1, 2, 3];
-arr.push(4,5,6);
-console.log(arr1);
+arr1 = [1,2,3]
+let pushArr = arr1.push(4,5,6);
+
+// console.log(arr1);
 // 4. Дан массив [1, 2, 3]. Добавьте ему в начало элементы 4, 5, 6.
-arr = [1, 2, 3];
-arr.unshift(4,5,6);
+arr1 = [1, 2, 3];
+let unshiftArr = arr1.unshift(4,5,6);
 
 
 // shift, pop
 // 5. Дан массив ['js', 'css', 'html']. Выведите на экран первый элемент и удалите
 // его.
-arr = ['js', 'css', 'html'];
-console.log(arr.shift());
+
+let arr = ['js', 'css', 'html'];
+console.log(arr.shift(), arr);
+
 // 6. Дан массив ['js', 'css', 'html']. Выведите на экран последний элемент и
 // удалите его.
+
 arr = ['js', 'css', 'html'];
-console.log(arr.pop());
+console.log(arr.pop(), arr);
 
 
 // slice
 // 7. Дан массив [1, 2, 3, 4, 5]. С помощью метода slice запишите в новый
 // элементы [1, 2, 3].
 arr = [1, 2, 3, 4, 5];
-newArr = arr.slice(0, 3);
+let newArr = arr.slice(0, 3);
+console.log(newArr, arr)
 // 8. Дан массив [1, 2, 3, 4, 5]. С помощью метода slice запишите в новый
 // элементы [4, 5].
 newArr = arr.slice(3,5)
-console.log(arr);
+console.log(newArr, arr);
 
 
 // 9. Дан массив [1, 2, 3, 4, 5]. С помощью метода splice преобразуйте массив
 // в [1, 4, 5].
+arr.splice(1, 2);
+console.log(arr)
 
 // 10. Дан массив [1, 2, 3, 4, 5]. С помощью метода splice запишите в новый
 // массив элементы [2, 3, 4].
+arr = [1, 2, 3, 4, 5];
+let newSpliceArr = arr.splice(1, 3)
+console.log(newSpliceArr)
 
 // 11. Дан массив [1, 2, 3, 4, 5]. С помощью метода splice сделайте из него
 // массив [1, 2, 3, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;, 4, 5].
