@@ -89,7 +89,13 @@ console.log(arr.sort());
 arr = [2, 4, 'a', 'r'];
 let string = 'a';
 
-const hasElem1 = function(arr=[], string=''){
+/**
+ * 
+ * @param {arrey} arr 
+ * @param {string|number} string 
+ * @returns {boolean}
+ */
+const hasElem1 = function(arr, string){
   for(elem of arr){
     if(elem===string){
       return true
@@ -99,8 +105,13 @@ const hasElem1 = function(arr=[], string=''){
 }
 console.log(hasElem1(arr, string));
 
-
-const hasElem = function(arr=[], string=''){
+/**
+ * 
+ * @param {arrey} arr 
+ * @param {string|number} string 
+ * @returns {boolean}
+ */
+const hasElem = function(arr, string){
   let rez = false
   arr.forEach((elem) =>{
     // console.log(elem)
@@ -112,3 +123,33 @@ const hasElem = function(arr=[], string=''){
 }
 console.log(hasElem(arr, string));
 
+
+//2. Дан массив с числами. Проверьте, что в этом массиве есть указанное
+// число. Если есть - вернуть true, а если нет - вернуть false.
+
+arr = [2, 5, 7, 1, 87, 5];
+let num = 5;
+console.log(hasElem1(arr, num));
+console.log(hasElem(arr, num));
+
+
+// 3.Дан массив с числами. Проверьте, есть ли в нем два одинаковых числа
+// подряд. Если есть - вернуть true[2,2,1], а если нет - вернуть false[1,2,1]
+arr = [1,2,1,2];
+arr2 = [1,2,2,1];
+
+const twoTogether = function(arr){
+  for (let i = 1; i < arr.length; i++) {
+    if(arr[i-1] === arr[i] || arr[i] === arr[i+1]){
+      return true;
+    }
+    continue
+  }
+  return false
+}
+
+console.log(twoTogether(arr2))
+
+
+// 5.Дан массив arr. Найдите среднее арифметическое его элементов.
+// Проверьте задачу на массиве с элементами 12, 15, 20, 25, 59, 79.
